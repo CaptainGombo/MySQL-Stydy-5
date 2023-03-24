@@ -1,0 +1,43 @@
+MY SQL 문제풀기 Start
+
+1.아픈 동물 찾기
+(https://school.programmers.co.kr/learn/courses/30/lessons/59036)
+
+답:
+SELECT ANIMAL_ID, NAME FROM ANIMAL_INS
+WHERE INTAKE_CONDITION = 'Sick'
+
+2.동물의 아이디와 이름
+(https://school.programmers.co.kr/learn/courses/30/lessons/59403)
+
+답:
+SELECT ANIMAL_ID,NAME FROM ANIMAL_INS
+
+3.이름이 있는 동물의 아이디
+(https://school.programmers.co.kr/learn/courses/30/lessons/59407)
+
+답:
+SELECT ANIMAL_ID FROM ANIMAL_INS
+WHERE NAME IS NOT NULL
+
+4.상위 n개 레코드
+(https://school.programmers.co.kr/learn/courses/30/lessons/59405)
+
+답:
+SELECT NAME FROM ANIMAL_INS
+ORDER BY DATETIME
+LIMIT 1
+
+5.여러 기준으로 정렬하기
+(https://school.programmers.co.kr/learn/courses/30/lessons/59404)
+
+답:
+SELECT ANIMAL_ID,NAME,DATETIME FROM ANIMAL_INS
+ORDER BY NAME, DATETIME DESC
+
+6.어린 동물 찾기
+(https://school.programmers.co.kr/learn/courses/30/lessons/59037)
+
+답:
+SELECT ANIMAL_ID,NAME FROM ANIMAL_INS
+WHERE INTAKE_CONDITION != 'Aged'
